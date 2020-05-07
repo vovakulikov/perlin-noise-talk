@@ -10,7 +10,7 @@ const CustomH = styled(H1)`
 
 const ThreeDemesionalNoise = (props) => (
     <Slide {...props} centered>
-        <CustomH>Three dimensional noise is a just a slices of two dimensional</CustomH>
+        <CustomH>Three dimensional noise is a just slices of two dimensional</CustomH>
     </Slide>
 );
 

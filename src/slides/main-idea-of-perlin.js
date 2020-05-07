@@ -39,15 +39,15 @@ export function CreateNoiseFuncCharts(props) {
                     }
 
                     if (index == 1) {
-                        return (<img style={{ height: '100%' }} src="./images/build-a-noise-2.png"/>);
+                        return (<img style={{ height: '100%' }} src="./images/build-noise-2.png"/>);
                     }
 
                     if (index == 2) {
-                        return (<img style={{ height: '100%' }} src="./images/build-a-noise-3.png"/>);
+                        return (<img style={{ height: '100%' }} src="./images/build-noise-3.png"/>);
                     }
 
                     if (index == 3) {
-                        return (<img style={{ height: '100%' }} src="./images/build-a-noise-4.png"/>);
+                        return (<img style={{ height: '100%' }} src="./images/build-noise-4.png"/>);
                     }
 
                     if (index == 4) {
