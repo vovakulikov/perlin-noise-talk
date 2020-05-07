@@ -11,8 +11,6 @@ const Agenda = (props) => (
             <li>Perlin Noise</li>
             <li>Flow field</li>
         </List>
-
-        <H3>And figure out how to draw a rough circle</H3>
     </Slide>
 );
 

@@ -5,13 +5,15 @@ import { baseTextColor } from "./color";
 
 // Slides
 import Intro from './slides/intro';
+import IntroDemo from './slides/intro-demo';
+import SecondIntroDemo from './slides/second-intro-demo';
 import Agenda from './slides/agenda';
 import PerlinNoiseCall from './slides/perlin-noise-code-call';
 import PerlinNoiseIs from './slides/perlin-noise-is';
 import PrefaceOfRandom from './slides/preface-of-random';
 import NormalDefinition from './slides/normal-definition';
 import Special from './slides/special-thing-of-perlin-noise';
-import MainIdea from './slides/main-idea-of-perlin';
+import MainIdea, { RelationChart, CreateNoiseFuncCharts } from './slides/main-idea-of-perlin';
 import HorizonralDemo, { CodeDemo } from './slides/horizontal-ball-demo';
 import InteractiveNoiseChart from './slides/interactive-noise-chart'
 import ClassicPerlinNoiseCloud, { CloudCode } from './slides/classic-perlin-noise-cloud'
@@ -38,6 +40,10 @@ export default function PitchDesk() {
 
          <Intro name="The first one" />
 
+         <IntroDemo name={"Intro demo"}/>
+
+         <SecondIntroDemo name={"Second intro demo"}/>
+
          <Agenda name={'Agenda'}/>
 
          <PerlinNoiseIs name={'Wiki definition'}/>
@@ -46,13 +52,17 @@ export default function PitchDesk() {
 
          <MainIdea name={'Main idea'}/>
 
-         <NormalDefinition name={'The normal definition'}/>
+         <RelationChart name={'The relation charts'}/>
+
+         {/*<NormalDefinition name={'The normal definition'}/>*/}
 
          <PrefaceOfRandom name={'Preface'}/>
 
          <InteractiveNoiseChart name={'Interactive Chart'}/>
 
-         <Special name={'Perlin is pure'} />
+         <CreateNoiseFuncCharts name={'Build you own noise'}/>
+
+         {/*<Special name={'Perlin is pure'} />*/}
 
          <HorizonralDemo name={'Horizontal Demo Ball'}/>
 

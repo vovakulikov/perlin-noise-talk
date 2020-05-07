@@ -15,7 +15,7 @@ const InlineCode = styled.code`
 
 export default function(props) {
     return (
-        <Slide {...props}>
+        <Slide {...props} centered>
             <H2>API example</H2>
 
             <Code>{`const randomValue = noise(5)
