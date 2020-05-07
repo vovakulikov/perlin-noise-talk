@@ -1,11 +1,12 @@
 
 import React  from 'react';
-import {Slide} from "presa";
+import {Slide, ControlledFragment} from "presa";
 import styled from "styled-components";
 
 import P5Wrapper from 'react-p5-wrapper';
 import {H2, Code} from "presa/blocks";
 import {primaryColor} from "../color";
+import PlainSlide from "../components/plain-slide";
 
 const InlineCode = styled.code`
   letter-spacing: -0.5px;
@@ -66,10 +67,26 @@ export function Explanation(props) {
         <Slide {...props} centered>
             <H2>That's happening cause we call <InlineCode>noise</InlineCode> function to calculate <InlineCode>x</InlineCode> and <InlineCode>y</InlineCode> value with same argument <InlineCode>t</InlineCode></H2>
             <Code>
-                {`var x = p.width * p.noise(t);
-var y = p.height * p.noise(t);`}
+                {`var x = width * noise(t);
+var y = height * noise(t);`}
             </Code>
         </Slide>
+    );
+}
+
+export function QuickFixChart(props) {
+    return(
+        <PlainSlide {...props}>
+            <ControlledFragment numberOfSteps={2}>
+                {(index) => {
+                    if (index == 0 || index == -Infinity) {
+                        return (<img style={{ height: '100%' }} src="./images/noise-explanation-3-hack-for-2-dimension.png"/>);
+                    }
+
+                    return (<img style={{ height: '100%' }} src="./images/noise-explanation-4-hack-for-2-dimension.png"/>);
+                }}
+            </ControlledFragment>
+        </PlainSlide>
     );
 }
 
@@ -78,7 +95,7 @@ export function QuickFix(props) {
         <Slide {...props} centered>
             <H2>For now we can add some offset to <InlineCode>y</InlineCode> noise-calculation</H2>
             <Code>
-                {`var y = p.height * p.noise(t+5);`}
+                {`var y = height * noise(t+5);`}
             </Code>
         </Slide>
     );

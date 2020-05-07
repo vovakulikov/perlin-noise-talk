@@ -2,6 +2,7 @@ import React  from 'react';
 import {Slide} from "presa";
 
 import P5Wrapper from 'react-p5-wrapper';
+import PlainSlide from "../components/plain-slide";
 
 function sketch(p) {
     let canvas;
@@ -27,9 +28,12 @@ function sketch(p) {
         p.beginShape();
         for (var i = 0; i < 200; i++) {
             var ang = p.map(i, 0, 200, 0, p.TWO_PI);
+
             var rad = p.height * 0.6 * p.noise(i * 0.01, t * 0.005);
+
             var x = rad * p.cos(ang);
             var y = rad * p.sin(ang);
+
             p.curveVertex(x, y);
         }
         p.endShape(p.CLOSE);
@@ -37,6 +41,14 @@ function sketch(p) {
         t += 1;
     };
 };
+
+export function ArtifactProblemChart(props) {
+    return (
+        <PlainSlide {...props}>
+            <img style={{ height: '100%' }} src="./images/circle-problem.png"/>
+        </PlainSlide>
+    );
+}
 
 export default function(props) {
 

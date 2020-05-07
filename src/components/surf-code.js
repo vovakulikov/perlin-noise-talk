@@ -26,6 +26,7 @@ const CodeWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   margin: 40px 0 20px 0;
+  height: 100%;
 `
 
 export default CustomCode;
